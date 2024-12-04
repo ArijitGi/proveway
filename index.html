@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOGO Offer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .header {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #ff729f;
+      margin-bottom: 20px;
+    }
+
+    
+    .unit {
+      border: 1px solid #eaeaea;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .unit input {
+      margin-right: 10px;
+    }
+
+    .unit input:checked + .content {
+      border: 2px solid #ff729f;
+    }
+
+    .unit .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .unit .title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .unit .discount {
+      font-size: 12px;
+      color: #ff729f;
+      font-weight: bold;
+      background: #ffeaf1;
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+
+    .unit .price {
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .unit .price .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 12px;
+    }
+
+    .expandable {
+      display: none;
+      padding: 10px;
+      margin-top: 10px;
+      background: #fff5f8;
+      border: 1px solid #ff729f;
+      border-radius: 8px;
+    }
+
+    .unit input:checked ~ .expandable {
+      display: block;
+    }
+
+    .expandable .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .expandable .row select {
+      width: 48%;
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+
+    .delivery-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .delivery-row .total {
+      color: #ff729f;
+    }
+
+    .add-to-cart {
+      background: #ff729f;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .row h5 {
+        padding-right: 4px;
+    }
+
+    .footer {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .most-popular {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #ff729f;
+      color: white;
+      padding: 5px 10px;
+      font-size: 10px;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">YAY! It's BOGO</div>
+
+    <div class="unit">
+      <input type="radio" name="unit" id="unit1">
+      <div class="content">
+        <label for="unit1">
+          <div>
+            <span class="title">1 Unit</span>
+            <span class="discount">10% Off</span>
+          </div>
+        </label>
+        <div class="price">
+          <div>$10.00 USD</div>
+          <div class="old-price">$24.00 USD</div>
+        </div>
+      </div>
+      <div class="expandable">
+        <div class="row">
+        <h5>#1</h5>
+          <select>
+            <option>Size</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+          </select>
+        </div>
+        <div class="row">
+            <h5>#2</h5>
+          <select>
+            <option>Size</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="unit">
+      <input type="radio" name="unit" id="unit2">
+      <div class="content">
+        <label for="unit2">
+          <div>
+            <span class="title">2 Unit</span>
+            <span class="discount">20% Off</span>
+          </div>
+        </label>
+        <div class="price">
+          <div>$18.00 USD</div>
+          <div class="old-price">$24.00 USD</div>
+        </div>
+      </div>
+      <div class="most-popular">MOST POPULAR</div>
+      <div class="expandable">
+        <div class="row">
+        <h5>#1</h5>
+          <select>
+            <option>Size</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+          </select>
+        </div>
+        <div class="row">
+            <h5>#2</h5>
+          <select>
+            <option>Size</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="unit">
+      <input type="radio" name="unit" id="unit3">
+      <div class="content">
+        <label for="unit3">
+          <div>
+            <span class="title">3 Unit</span>
+            <span class="discount">30% Off</span>
+          </div>
+        </label>
+        <div class="price">
+          <div>$24.00 USD</div>
+          <div class="old-price">$24.00 USD</div>
+        </div>
+      </div>
+      <div class="expandable">
+        <div class="row">
+        <h5>#1</h5>
+          <select>
+            <option>Size</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+          </select>
+        </div>
+        <div class="row">
+            <h5>#2</h5>
+          <select>
+            <option>Size</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+          <select>
+            <option>Colour</option>
+            <option>Black</option>
+            <option>White</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="delivery-row">
+      <div>Free Delivery</div>
+      <div class="total">Total: $18.00 USD</div>
+    </div>
+
+    <div class="add-to-cart">+ Add to Cart</div>
+    <div class="footer">@ Powered by Pumper</div>
+  </div>
+</body>
+</html>
